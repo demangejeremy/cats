@@ -8,12 +8,16 @@ fn main() {
     let now = Instant::now();
 
     // lem::hello();
-    let mut result = token::stop("Je suis un lecteur régulier de ce magazine de sport.");
+    let mut result = token::stop("Il fait une passe à son gardien et marque le but.");
     result = lem::lematizer(&result);
     result = theme::detection(&result);
 
     println!("=========");
-    println!("{}", result);
+    if (result != "") {
+        println!("Thematique : {}", result);
+    } else {
+        println!("Thematique : none");
+    }
 
     println!("(Execution time: {}ms)", now.elapsed().as_millis());
 }
