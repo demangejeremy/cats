@@ -1,0 +1,7 @@
+raquette
+balle
+tennis
+let
+coup
+droit
+revers
