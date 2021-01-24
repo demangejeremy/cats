@@ -12,7 +12,7 @@ pub fn stop(text: &str) -> String {
     let split = contents.split("\n");
 
     let mut sort_text = text.to_ascii_lowercase();
-    sort_text = text.nfd().filter(char::is_ascii).collect();
+    sort_text = sort_text.nfd().filter(char::is_ascii).collect();
 
     sort_text = sort_text.replace(".", "");
     sort_text = sort_text.replace(",", "");

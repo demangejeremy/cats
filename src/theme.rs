@@ -27,7 +27,7 @@ pub fn detection(text: &str) -> String {
             let split = contents.split("\n");
 
             let mut cat = (&get_path).replace("./lexique/fr/thematiques/", "");
-            let mut cat = cat.replace(".txt", "");
+            cat = cat.replace(".txt", "");
             cats.push_str(&cat);
             cats.push_str("/");
 
