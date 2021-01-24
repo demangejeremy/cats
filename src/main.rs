@@ -7,7 +7,7 @@ fn main() {
     let now = Instant::now();
 
     // lem::hello();
-    let mut result = token::stop("Bonjour à tous les amis !");
+    let mut result = token::stop("Je suis un lecteur régulier de ce magazine de sport.");
     result = lem::lematizer(&result);
 
     println!("=========");
