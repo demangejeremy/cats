@@ -4,7 +4,7 @@ use unicode_normalization::char::compose;
 use unicode_normalization::UnicodeNormalization;
 use std::fs;
 
-pub fn stop() { 
+pub fn stop(text: &str) -> String { 
     let filename = "./lexique/fr/stopwords.txt";
 
     let contents = fs::read_to_string(filename)
@@ -12,11 +12,16 @@ pub fn stop() {
 
     let split = contents.split("\n");
 
-    println!("Stop:");
+    let mut sort_text = text.to_ascii_lowercase();
+    sort_text = text.nfd().filter(char::is_ascii).collect();
 
     for s in split {
         let word = s.to_ascii_lowercase();
         let ascii: String = word.nfd().filter(char::is_ascii).collect();
-        println!("{}", ascii);
+        let cut = [" ".to_string(), ascii, " ".to_string()].join("");
+        sort_text = sort_text.replace(&cut, " ");
+        // println!("{}", ascii);
     }
+
+    return sort_text;
 }

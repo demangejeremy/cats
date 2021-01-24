@@ -7,7 +7,10 @@ fn main() {
     let now = Instant::now();
 
     // lem::hello();
-    token::stop();
+    let result = token::stop("Bonjour à tous les amis !");
 
-    println!("Execution time: {}ms", now.elapsed().as_millis());
+    println!("=========");
+    println!("{}", result);
+
+    println!("(Execution time: {}ms)", now.elapsed().as_millis());
 }
