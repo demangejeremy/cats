@@ -6,7 +6,7 @@ pub fn hello() {
 
     // Stemm the word "fruitlessly"
     // Please be aware that all algorithms expect their input to only contain lowercase characters.
-    let result = en_stemmer.stem("sportive");
+    let result = en_stemmer.stem("ballon");
     
     println!("{}", result);
 }
