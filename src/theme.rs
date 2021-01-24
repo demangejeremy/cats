@@ -6,13 +6,14 @@ use unicode_normalization::UnicodeNormalization;
 use std::fs;
 
 pub fn detection(text: &str) -> String { 
+
     let fr_stemmer = Stemmer::create(Algorithm::French);
+    let mut cats = "".to_string();
 
     let original: String = text.to_string(); 
     let mut all_occurences: String = "".to_string();
 
     let paths = fs::read_dir("./lexique/fr/thematiques/").unwrap();
-    println!("-----");
 
     for path in paths {
 
@@ -27,6 +28,8 @@ pub fn detection(text: &str) -> String {
 
             let mut cat = (&get_path).replace("./lexique/fr/thematiques/", "");
             let mut cat = cat.replace(".txt", "");
+            cats.push_str(&cat);
+            cats.push_str("/");
 
             // println!("{}", cat);
             // println!("-");
@@ -45,10 +48,20 @@ pub fn detection(text: &str) -> String {
 
     }
 
-    println!("{}", all_occurences);
-    let split = text.split(" ");
-    let mut sort_text: String = "".to_string();
+    let loop_cats = cats.split("/");
+    let mut res_cat: String = "".to_string();
+    let mut res_cat_num = 0;
 
+    for s in loop_cats {
+        if s != "" {
+            let c = all_occurences.matches(s).count();
+            if c > res_cat_num {
+                res_cat_num = c;
+                res_cat = s.to_string();
+            }
+            // println!("{}: {}", s, c);        
+        }
+    }
 
-    return sort_text;
+    return res_cat;
 }
