@@ -1,9 +1,12 @@
-extern crate native_stemmers;
-use native_stemmers::{Algorithm, Stemmer};
+extern crate rust_stemmers;
+use rust_stemmers::{Algorithm, Stemmer};
 
-// Create a stemmer for the english language
-let en_stemmer = Stemmer::create(Algorithm::English);
+pub fn hello() { 
+    let en_stemmer = Stemmer::create(Algorithm::French);
 
-// Stemm the word "fruitlessly"
-// Please be aware that all algorithms expect their input to only contain lowercase characters.
-assert_eq!(en_stemmer.stem("fruitlessly"), "fruitless");
+    // Stemm the word "fruitlessly"
+    // Please be aware that all algorithms expect their input to only contain lowercase characters.
+    let result = en_stemmer.stem("sportive");
+    
+    println!("{}", result);
+}
