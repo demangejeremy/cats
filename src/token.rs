@@ -1,6 +1,5 @@
 extern crate unicode_normalization;
 
-use unicode_normalization::char::compose;
 use unicode_normalization::UnicodeNormalization;
 use std::fs;
 
@@ -26,11 +25,7 @@ pub fn stop(text: &str) -> String {
         let ascii: String = word.nfd().filter(char::is_ascii).collect();
         let cut = [" ".to_string(), ascii, " ".to_string()].join("");
         sort_text = sort_text.replace(&cut, " ");
-        // println!("{}", ascii);
     }
-
-
-
 
     return sort_text;
 }
