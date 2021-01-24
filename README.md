@@ -6,7 +6,7 @@ Détection des grandes thématiques d'un texte ou de longs corpus. Développé e
 
 ## Pour commencer
 
-Entrez ici les instructions pour bien débuter avec votre projet...
+En développement actif. Plus d'informations prochainement.
 
 ### Pré-requis
 
