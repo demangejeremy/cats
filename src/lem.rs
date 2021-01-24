@@ -1,12 +1,17 @@
 extern crate rust_stemmers;
 use rust_stemmers::{Algorithm, Stemmer};
 
-pub fn hello() { 
-    let en_stemmer = Stemmer::create(Algorithm::French);
+pub fn lematizer(text: &str) -> String { 
+    let fr_stemmer = Stemmer::create(Algorithm::French);
 
-    // Stemm the word "fruitlessly"
-    // Please be aware that all algorithms expect their input to only contain lowercase characters.
-    let result = en_stemmer.stem("élaborer");
+    let split = text.split(" ");
+    let mut sort_text = text.to_ascii_lowercase();
+
+    for s in split {
+        let result = fr_stemmer.stem(s);
+        println!("{}", result);
+    }
+
     
-    println!("{}", result);
+    return sort_text;
 }
