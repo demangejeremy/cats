@@ -7,8 +7,11 @@ use std::time::{Instant};
 fn main() {
     let now = Instant::now();
 
+    // Commande line
+    let phrase = std::env::args().nth(1).expect("no sentence in CLI.");
+
     // lem::hello();
-    let mut result = token::stop("Je joue au tennis avec une balle dure.");
+    let mut result = token::stop(&phrase);
     result = lem::lematizer(&result);
     result = theme::detection(&result);
 
