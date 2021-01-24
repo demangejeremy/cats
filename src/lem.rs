@@ -1,4 +1,5 @@
 extern crate rust_stemmers;
+
 use rust_stemmers::{Algorithm, Stemmer};
 
 pub fn lematizer(text: &str) -> String { 
