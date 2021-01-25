@@ -4,6 +4,7 @@
   <img src="https://forthebadge.com/images/badges/made-with-rust.svg"/>
   <img src="https://forthebadge.com/images/badges/built-with-love.svg"/>
 </p>
+<br/>
 
 Détection des grandes thématiques d'un texte ou de longs corpus. Développé en Rust pour des résultats en quelques millisecondes peu importe la taille du texte 🚀
 
