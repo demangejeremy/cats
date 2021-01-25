@@ -1,6 +1,9 @@
-# 🐱 Cats
+<h1 align="center">🐱 Cats</h1>
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-rust.svg)](https://www.rust-lang.org/) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://demangejeremy.me/)
+<p align="center">
+  <img src="https://forthebadge.com/images/badges/made-with-rust.svg"/>
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg"/>
+</p>
 
 Détection des grandes thématiques d'un texte ou de longs corpus. Développé en Rust pour des résultats en quelques millisecondes peu importe la taille du texte 🚀
 
