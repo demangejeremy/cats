@@ -28,7 +28,7 @@ D'autres ressources seront disponibles prochainement.
 
 ## Fabriqué avec
 
-Fabriqué avec ❤️ par Jérémy Demange et toute l'équipe de [CY IDHN](https://cyidhn.cyu.fr/)
+Fabriqué avec ❤️ par Jérémy Demange et toute l'équipe de [CY IDHN](https://cyidhn.cyu.fr/).
 
 ## Auteurs
 
