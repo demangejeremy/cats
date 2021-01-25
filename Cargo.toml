@@ -1,6 +1,6 @@
 [package]
-name = "theme"
-version = "0.1.0"
+name = "cats"
+version = "0.2.1"
 authors = ["Jérémy DEMANGE <jeremy@scrapfast.io>"]
 edition = "2018"
 
