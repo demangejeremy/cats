@@ -1,3 +1,6 @@
+ping-pong
+ping
+pong
 balle
 ace
 amorti
