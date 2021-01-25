@@ -1,1 +1,3 @@
 football -> sport
+ping_pong -> sport
+tennis -> sport
